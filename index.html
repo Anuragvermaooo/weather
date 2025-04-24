@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tornedo Weather </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gradient-to-tr from-gray-900 via-gray-800 to-gray-900 text-white min-h-screen p-6">
+  <div class="max-w-5xl mx-auto">
+    <header class="text-center mb-10">
+      <h1 class="text-5xl font-bold text-yellow-400 mb-2">🌤️ Tornedo Weather </h1>
+      <p class="text-gray-300 text-lg">Real-time weather updates for any city.></p>
+    </header>
+
+    <div class="flex flex-col md:flex-row md:items-center md:justify-center gap-4 mb-10">
+      <input id="cityInput" type="text" placeholder="Enter city name"
+        class="px-4 py-3 rounded-xl bg-gray-800 border border-yellow-500 text-white w-full md:w-80">
+      <button onclick="getWeather()"
+        class="px-6 py-3 rounded-xl bg-yellow-400 text-black font-bold hover:bg-yellow-300 transition duration-200">Search</button>
+    </div>
+
+    <div id="weatherCard" class="glass rounded-3xl p-8 shadow-xl hidden">
+      <h2 id="cityName" class="text-3xl font-semibold text-center mb-6"></h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="card"><h3>🌡 Temperature</h3><p id="temperature"></p></div>
+        <div class="card"><h3>🌥 Condition</h3><p id="description"></p></div>
+        <div class="card"><h3>🌬 Wind</h3><p id="wind"></p></div>
+        <div class="card"><h3>💧 Humidity</h3><p id="humidity"></p></div>
+        <div class="card"><h3>🌧️ Rainfall</h3><p id="rain"></p></div>
+        <div class="card"><h3>📈 Pressure</h3><p id="pressure"></p></div>
+        <div class="card"><h3>🌞 UV Index</h3><p id="uvIndex"></p></div>
+        <div class="card"><h3>🌡️ Feels Like</h3><p id="feelsLike"></p></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
